@@ -1,22 +1,22 @@
 hotdogs <- read.csv("http://datasets.flowingdata.com/hot-dog-contest-winners.csv")
 
-
-hotdogs <- hotdogs
-
 head(hotdogs)
 
-New.record <- hotdogs$New.record
+Country <- hotdogs$Country
+Year <- hotdogs$Year
+Dogs.eaten <- hotdogs$Dogs.eaten
 
-
-
-for ( i in 1:length(New.record) ) {
-  if (New.record[i] == 1) {
-    fill_colors <- c(fill_colors, "black")
+#Function to define fill based on country
+fill <- c()
+for ( i in 1:length(Country) ) {
+  if (Country[i] == "United States") {
+    fill <- c(fill, "#5b0f21")
   } else {
-    fill_colors <- c(fill_colors, "grey")
+    fill <- c(fill, "#c0bfbd")
   }
 }
 
-barplot(hotdogs$Dogs.eaten, names.arg=hotdogs$Year, col=fill_colors, border=NA, xlab="Year", ylab="Hot dogs and buns (HDB) eaten")
+barplot(Dogs.eaten, names.arg = Year,  col=fill, border=NA, xlab="Year", ylab="Hot dogs and buns (HDB) eaten")
+
 
 
