@@ -35,5 +35,6 @@ for ( i in 1:length(Country) ) {
 
 barplot(Dogs.eaten, names.arg = Year,  col=fill, border=NA, xlab="Year", ylab="Hot dogs and buns (HDB) eaten")
 ```
+![download](https://github.com/schachz/HotDogChallenge/assets/100746204/908a34d1-7c09-4405-b567-7158c07f5901)
 
-![](HotdogChallenge_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
+
